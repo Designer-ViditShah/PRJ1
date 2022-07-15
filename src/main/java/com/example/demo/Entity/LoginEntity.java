@@ -1,4 +1,4 @@
-package com.example.demo.item;
+package com.example.demo.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,20 +10,16 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ItemEntity {
-
+public class LoginEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Column(name = "userId", nullable = false)
+    private String userId;
 
-    @Column(name = "qty", nullable = false)
-    private Long qty;
-
-    @Column(name = "price", nullable = false)
-    private Long price;
+    @Column(name = "password", nullable = false)
+    private String password;
 
 }
